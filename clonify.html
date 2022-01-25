@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- add icon link -->
+    <link rel = "icon" href = "logomusic.png" type = "image/x-icon"> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clonify -  Listening new way</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+        body{
+            background-color: antiquewhite;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        nav{
+            font-family: 'Mochiy Pop P One', sans-serif;
+        }
+
+        nav ul{
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+            height: 65px;
+            background-color: #12d138;
+            color: white;
+        }
+
+        nav ul li{
+            padding: 0 12px;
+            text-align: center;
+            width: 32%;
+            font-size: 49px;
+            height: 11vh;
+
+        }
+
+        .brand img{
+            width: 130px;
+            padding: 0 8px;
+        }
+
+        .brand{
+            display: flex;
+            align-items: center;
+            font-weight: bolder;
+            font-size: 1.3rem;
+        }
+
+        .container{
+            min-height: 65vh;
+            background-color: black;
+            color: white;
+            font-family: 'Varela Round', sans-serif;
+            display: flex;
+            width: 75%;
+            margin: 13px auto;
+            border-radius: 12px;
+            padding: 34px;
+            background-image: url(colnifybackground.jpg);
+            background-position: center; /* center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-size: cover; /* Resize the background image to cover the entire container */
+            
+        }
+
+        .bottom{
+            position: sticky;
+            height: 100px;
+            background-color: black;
+            color: white;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .icons{
+            margin-top: 10px;
+        }
+
+        .icons i{
+            cursor: pointer;
+        }
+
+        #myProgressBar{
+            width: 40vw;
+            cursor: pointer;
+        }
+
+        .songItemContainer{
+            margin-top: 74px;
+        }
+
+        .songItem{
+            height: 50px;
+            display: flex;
+            background-color: black;
+            color: white;
+            margin: 12px 0;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 34px;
+            opacity: 90%;
+        }
+
+        .songItem img{
+            width: 35px;
+            margin: 0 23px;
+            border-radius: 34px;
+        }
+
+        .timestamp{
+            margin: 0 23px;
+            font-size: 20px;
+
+        }
+
+        .timestamp i{
+            cursor: pointer;
+        }
+
+        .songInfo{
+            position: absolute;
+            left: 0;
+            font-family: 'Varela Round', sans-serif;
+        }
+
+        .songInfo img{
+            opacity: 0;
+            transition: opacity 0.569s ease-in;
+        }
+
+        @media only screen and (max-width: 1100px) {
+    body {
+      background-color: black;
+    }
+  }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="brand"><img src="colnifylogo.png" alt="clonify"></li>
+            <li>Clonify</li>
+        </ul>
+    </nav> 
+    
+    <div class="container">
+        <div class="songList">
+            <h1>
+                Change your mOOd - Moodify 
+            </h1>
+            <div class="songItemContainer">
+                <div class="songItem"><img alt="1"><span class="songName">Shiddat Title Track</span><span class="songlistplay"><span class="timestamp"> 4:03 <i id="0" class="far songItemPlay fa-play-circle"></i></span></span></div>
+                <div class="songItem"><img alt="1"><span class="songName">Excuses</span><span class="songlistplay"><span class="timestamp"> 2:57 <i id="1" class="far songItemPlay fa-play-circle"></i></span></span></div>
+                <div class="songItem"><img alt="1"><span class="songName">DJ Gimi-O x Habibi [Albanian Remix]</span><span class="songlistplay"><span class="timestamp"> 2:18 <i id="2" class="far songItemPlay fa-play-circle"></i></span></span></div>
+                <div class="songItem"><img alt="1"><span class="songName">Ritviz & Nucleya - Baaraat</span><span class="songlistplay"><span class="timestamp"> 3:43 <i id="3" class="far songItemPlay fa-play-circle"></i></span></span></div>
+                <div class="songItem"><img alt="1"><span class="songName">Dil Ko Karaar Aaya</span><span class="songlistplay"><span class="timestamp"> 4:28 <i id="4" class="far songItemPlay fa-play-circle"></i></span></span></div>
+                <div class="songItem"><img alt="1"><span class="songName">Soch Liya</span><span class="songlistplay"><span class="timestamp"> 3:34 <i id="5" class="far songItemPlay fa-play-circle"></i></span></span></div>
+                <div class="songItem"><img alt="1"><span class="songName">Way Back Home</span><span class="songlistplay"><span class="timestamp"> 3:12 <i id="6" class="far songItemPlay fa-play-circle"></i></span></span></div>
+                <div class="songItem"><img alt="1"><span class="songName">BTS (방탄소년단) 'Dynamite'</span><span class="songlistplay"><span class="timestamp"> 3:43 <i id="7" class="far songItemPlay fa-play-circle"></i></span></span></div>
+                <div class="songItem"><img alt="1"><span class="songName">Qara 07 - Azeri </span><span class="songlistplay"><span class="timestamp"> 3:28 <i id="8" class="far songItemPlay fa-play-circle"></i></span></span></div>
+                <div class="songItem"><img alt="1"><span class="songName">Nicki Minaj - High School</span><span class="songlistplay"><span class="timestamp"> 4:26 <i id="9" class="far songItemPlay fa-play-circle"></i></span></span></div>
+            </div>
+        </div>
+        <div class="songBanner"></div>        
+    </div>
+
+    <div class="bottom">
+        <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">     
+        <div class="icons">
+           <!-- fontawesome icons -->
+           <i class="fas fa-3x fa-step-backward" id="previous"></i>
+           <i class="far fa-3x fa-play-circle" id="masterPlay"></i>
+           <i class="fas fa-3x fa-step-forward" id="next"></i>
+        </div>  
+        <div class="songInfo">
+            <img src="colnifygif.gif" width="110px" alt="" id="gif"> <span id="masterSongName"></span> Shiddat Title Track
+        </div>     
+    </div>
+
+    <script src="https://kit.fontawesome.com/a276b0cc7f.js" crossorigin="anonymous"></script>
+    
+    <script>
+        console.log("Welcome to Cloneify");
+
+        // Initialize the Variables
+        let singIndex = 0;
+        let audioElement = new Audio('1.mp3');
+        let masterPlay = document.getElementById('masterPlay');
+        let myProgressBar = document.getElementById('myProgressBar');
+        let gif = document.getElementById('gif');
+        let masterSongName = document.getElementById('masterSongName');
+        let songItems = Array.from(document.getElementsByClassName('songItem'));
+
+            
+        let songs = [
+            {songName: "Shiddat Title Track", filepath: "songs/1.mp3", coverPath: "covers/cover1.jpg"},
+            {songName: "Excuses", filepath: "songs/2.mp3", coverPath: "covers/cover2.jfif"},
+            {songName: "DJ Gimi-O x Habibi [Albanian Remix]", filepath: "songs/3.mp3", coverPath: "covers/cover3.jpg"},
+            {songName: "Ritviz & Nucleya - Baaraat", filepath: "songs/4.mp3", coverPath: "covers/cover4.jfif"},
+            {songName: "Dil Ko Karaar Aaya", filepath: "songs/5.mp3", coverPath: "covers/cover5.jpg"},
+            {songName: "Soch Liya", filepath: "songs/6.mp3", coverPath: "covers/cover6.jfif"},
+            {songName: "Way Back Home", filepath: "songs/7.mp3", coverPath: "covers/cover7.jpg"},
+            {songName: "BTS (방탄소년단) 'Dynamite'", filepath: "songs/8.mp3", coverPath: "covers/cover8.jpg"},
+            {songName: "Qara 07 - Azeri", filepath: "songs/9.mp3", coverPath: "covers/cover9.jpg"},
+            {songName: "Nicki Minaj - High School", filepath: "songs/10.mp3", coverPath: "covers/cover10.jpg"},
+        ]
+        
+        songItems.forEach((element, i)=>{ 
+    element.getElementsByTagName("img")[0].src = songs[i].coverPath; 
+    element.getElementsByClassName("songName")[0].innerText = songs[i].songName; 
+})
+ 
+
+        //Handle play/pause click
+        masterPlay.addEventListener('click', ()=>{
+            if(audioElement.paused || audioElement.currentTime<=0){
+                audioElement.play();
+                masterPlay.classList.remove('fa-play-circle');
+                masterPlay.classList.add('fa-pause-circle');
+                gif.style.opacity = 1;
+            }
+            else{
+                audioElement.pause();
+                masterPlay.classList.remove('fa-pause-circle');
+                masterPlay.classList.add('fa-play-circle');
+                gif.style.opacity = 0;               
+            }
+        })
+        // Listen to Events
+        audioElement.addEventListener('timeupdate', ()=>{
+            // Update Seekbar
+            progress = parseInt((audioElement.currentTime/audioElement.duration)* 100);
+            myProgressBar.value = progress;            
+        })
+
+        myProgressBar.addEventListener('change', ()=>{
+            audioElement.currentTime = myProgressBar.value * audioElement.duration/100;
+        })
+
+
+const makeAllPlays = ()=>{
+    Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
+        element.classList.remove('fa-pause-circle');
+        element.classList.add('fa-play-circle');
+    })
+}
+
+Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
+    element.addEventListener('click', (e)=>{ 
+        makeAllPlays();
+        songIndex = parseInt(e.target.id);
+        e.target.classList.remove('fa-play-circle');
+        e.target.classList.add('fa-pause-circle');
+        audioElement.src = `songs/${songIndex+1}.mp3`;
+        masterSongName.innerText = songs[songIndex].songName;
+        audioElement.currentTime = 0;
+        audioElement.play();
+        gif.style.opacity = 1;
+        masterPlay.classList.remove('fa-play-circle');
+        masterPlay.classList.add('fa-pause-circle');
+    })
+})
+
+document.getElementById('next').addEventListener('click', ()=>{
+    if(songIndex>=9){
+        songIndex = 0
+    }
+    else{
+        songIndex += 1;
+    }
+    audioElement.src = `songs/${songIndex+1}.mp3`;
+    masterSongName.innerText = songs[songIndex].songName;
+    audioElement.currentTime = 0;
+    audioElement.play();
+    masterPlay.classList.remove('fa-play-circle');
+    masterPlay.classList.add('fa-pause-circle');
+
+})
+
+document.getElementById('previous').addEventListener('click', ()=>{
+    if(songIndex<=0){
+        songIndex = 0
+    }
+    else{
+        songIndex -= 1;
+    }
+    audioElement.src = `songs/${songIndex+1}.mp3`;
+    masterSongName.innerText = songs[songIndex].songName;
+    audioElement.currentTime = 0;
+    audioElement.play();
+    masterPlay.classList.remove('fa-play-circle');
+    masterPlay.classList.add('fa-pause-circle');
+})
+
+    </script>
+</body>
+</html>
